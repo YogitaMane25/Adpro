@@ -1,0 +1,31 @@
+package com.igap.adpro.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.igap.adpro.entity.State;
+import com.igap.adpro.service.StateService;
+
+@RestController
+@RequestMapping("/states")
+public class StateController 
+{
+	@Autowired
+	private StateService stateService;
+	
+//create new state
+	
+	@PostMapping
+	
+	public ResponseEntity<State> saveState(@RequestBody StateService state)
+	{
+		State savedState= stateService.saveState(state);
+		
+		return new ResponseEntity<>(savedState,HttpStatus.CREATED);
+	}
+}

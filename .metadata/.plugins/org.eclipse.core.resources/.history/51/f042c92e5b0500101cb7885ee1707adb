@@ -1,0 +1,53 @@
+package com.igap.adpro.serviceimpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.igap.adpro.entity.PMedia;
+import com.igap.adpro.repository.PMediaRepository;
+import com.igap.adpro.service.PMediaService;
+
+@Service
+public class PMediaServiceImpl implements PMediaService {
+
+	@Autowired
+	private PMediaRepository pMediaRepository;
+	
+//	create new pmedia
+	@Override
+	public PMedia savePMedia(PMedia pMedia) 
+	{
+	
+		return pMediaRepository.save(pMedia);
+	}
+
+//	get all pmedia
+	
+	@Override
+	public List<PMedia> getAllPMedias() 
+	{
+		
+		return null;
+	}
+
+	@Override
+	public PMedia getPMediaById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PMedia updatePMedia(int id, PMedia pMediaDetails) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deletePMediaById(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

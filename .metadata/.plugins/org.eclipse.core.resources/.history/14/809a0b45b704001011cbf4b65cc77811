@@ -1,0 +1,30 @@
+package com.igap.adpro.service;
+
+import java.util.List;
+
+public interface AppModuleService 
+{
+//	create new module
+	
+	Module saveModule(Module module);
+	
+//	get all module
+	
+	List<Module> getAllModule();
+	
+//	get module by id
+	
+	Module getModuleById(int id);
+	
+//	update module by ID
+	
+	Module updateModule(int id, Module moduleDetails);
+	
+//	delete module by ID
+	
+	void deleteModuleById(int id);
+
+	
+	
+	
+}

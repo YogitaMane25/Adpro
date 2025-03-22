@@ -1,0 +1,40 @@
+package com.igap.adpro.serviceimpl;
+
+import java.util.List;
+
+import com.igap.adpro.entity.PMedia;
+import com.igap.adpro.service.PMediaService;
+
+public class PMediaServiceImpl implements PMediaService {
+
+	@Override
+	public PMedia savePMedia(PMedia pMedia) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<PMedia> getAllPMedias() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PMedia getPMediaById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PMedia updatePMedia(int id, PMedia pMediaDetails) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deletePMediaById(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

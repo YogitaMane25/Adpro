@@ -1,0 +1,15 @@
+package com.igap.adpro.service;
+
+import com.igap.adpro.entity.Agency;
+import java.util.List;
+
+public interface AgencyService {
+
+	Agency saveAgency(Agency agency);
+
+	List<Agency> getAllAgencies();
+
+	Agency getAgencyById(int id);
+
+	void deleteAgencyById(int id);
+}

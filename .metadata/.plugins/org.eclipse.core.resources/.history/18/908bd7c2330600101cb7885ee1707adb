@@ -1,0 +1,40 @@
+package com.igap.adpro.serviceimpl;
+
+import java.util.List;
+
+import com.igap.adpro.entity.Gst;
+import com.igap.adpro.service.GstService;
+
+public class GstServiceImpl implements GstService {
+
+	@Override
+	public Gst saveGst(Gst gst) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Gst> getAllGst() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Gst getGstById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Gst updateGst(int id, Gst gstDetails) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteGstById(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

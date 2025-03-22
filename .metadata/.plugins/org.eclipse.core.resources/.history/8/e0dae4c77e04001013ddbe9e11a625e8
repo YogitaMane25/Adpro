@@ -1,0 +1,50 @@
+package com.igap.adpro.serviceimpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.igap.adpro.entity.Role;
+import com.igap.adpro.repository.RoleRepository;
+import com.igap.adpro.service.RoleService;
+
+public class RoleServiceImpl implements RoleService {
+	
+	
+	@Autowired
+	private RoleRepository roleRepository;
+
+	@Override
+	public Role saveRole(Role role) 
+	{
+		
+		return roleRepository.save(role);
+	}
+
+	@Override
+	public List<Role> getAllRoles() {
+		
+		return roleRepository.findAll();
+	}
+
+	@Override
+	public Role getRoleById(int id) 
+	{
+		
+		return roleRepository.findById(id)
+				.orElseThrow (()->RuntimeException()
+	}
+
+	@Override
+	public Role updateRoleById(int id, Role roleDetails) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteRoleById(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

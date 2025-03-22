@@ -1,0 +1,83 @@
+package com.igap.adpro.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.igap.adpro.dto.AdminDto;
+import com.igap.adpro.entity.Admin;
+import com.igap.adpro.service.AdminService;
+
+@RestController
+@RequestMapping("/admins")
+public class AdminsController
+{
+ @Autowired
+ private AdminService adminService;
+ 
+ @GetMapping("/")
+ ResponseEntity<List<Admin>> getAllAdmins()
+ {
+	 List<Admin> admins = adminService.getAll();
+	 return new ResponseEntity<>(admins,HttpStatus.OK);
+ }
+  @PostMapping("/")
+   ResponseEntity<Admin> save(@RequestBody AdminDto adminDto)
+  {
+	   Admin admin = new Admin();
+			   
+		          admin.setName(adminDto.getName());
+		          admin.setEmail(adminDto.getEmail());
+		          admin.setPassword(adminDto.getPassword());
+		          Admin newAdmin=adminService.save(admin);
+		          return new ResponseEntity<Admin>(newAdmin,HttpStatus.CREATED);
+  }
+			   
+			   @PutMapping("/{id}")
+			   ResponseEntity<Admin>update(@PathVariable int id,@RequestBody AdminDto adminDTO)
+			   {
+				   Admin existAdmin = adminService.getById(id);
+				   if (existAdmin != null) 
+				   {
+					existAdmin.setName(adminDTO.getName());
+					existAdmin.setEmail(adminDTO.getEmail());
+					existAdmin.setPassword(adminDTO.getPassword());
+					Admin updatedAdmin=adminService.save(existAdmin);
+					return new ResponseEntity<>(updatedAdmin,HttpStatus.OK);
+				}
+				   else 
+				   {
+					return null;
+				   }
+			   }
+			   
+			   @DeleteMapping("/{id}")
+			   ResponseEntity delete(@PathVariable int id)
+			   {
+				   adminService.delet(id);
+				   return new ResponseEntity(HttpStatus.OK);
+			   }
+			   
+			   @GetMapping("/{id}")
+			   ResponseEntity<Admin> get(@PathVariable int id)
+			   {
+				   Admin admin = adminService.getById(id);
+				   return new ResponseEntity<Admin>(admin,HttpStatus.OK);   
+						   
+			   }
+			   
+	   
+   }
+

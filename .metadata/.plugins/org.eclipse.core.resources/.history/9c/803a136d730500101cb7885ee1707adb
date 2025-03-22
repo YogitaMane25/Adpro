@@ -1,0 +1,56 @@
+package com.igap.adpro.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.igap.adpro.entity.EMedia;
+import com.igap.adpro.service.EMediaService;
+
+@RestController
+@RequestMapping("/emedias")
+public class EMediaController
+{
+ @Autowired EMediaService eMediaService;
+ 
+// create new emedia
+ 
+ @PostMapping
+ 
+ public ResponseEntity<EMedia> saveEMedia(@RequestBody EMedia eMedia)
+ {
+	 EMedia savedEMedia=eMediaService.saveEMedia(eMedia);
+	 
+	return new ResponseEntity<>(savedEMedia,HttpStatus.CREATED);
+	 
+ }
+ 
+// get all emedias
+ 
+ @GetMapping
+ 
+ public ResponseEntity<List<EMedia>> getAllEMedias()
+ {
+	 List<EMedia> eMedias= eMediaService.getAllEMedias();
+	 
+	 return new ResponseEntity<>(eMedias,HttpStatus.OK);
+	 
+ }
+ 
+// get emedias by ID
+ 
+ @GetMapping("/{id}")
+ 
+ public ResponseEntity<EMedia> 
+ 
+ 
+ 
+ 
+}

@@ -1,0 +1,40 @@
+package com.igap.adpro.serviceimpl;
+
+import java.util.List;
+
+import com.igap.adpro.entity.EMedia;
+import com.igap.adpro.service.EMediaService;
+
+public class EMediaServiceImpl implements EMediaService {
+
+	@Override
+	public EMedia saveEMedia(EMedia eMedia) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<EMedia> getAllEMedias() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public EMedia getEMediaById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public EMedia updateEMedia(int id, EMedia eMediaDetails) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteEMediaById(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

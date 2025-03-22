@@ -1,0 +1,40 @@
+package com.igap.adpro.serviceimpl;
+
+import java.util.List;
+
+import com.igap.adpro.entity.Holiday;
+import com.igap.adpro.service.HolidayService;
+
+public class HolidayServiceImpl implements HolidayService {
+
+	@Override
+	public Holiday saveHoliday(Holiday holiday) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Holiday> getAllHolidays() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Holiday getHolidayById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Holiday updateHoliday(int id, Holiday holiday) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteHolidayById(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

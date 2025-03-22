@@ -1,0 +1,42 @@
+package com.igap.adpro.serviceimpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.igap.adpro.entity.User;
+import com.igap.adpro.service.UserService;
+
+@Service
+public class UserServiceImpl implements UserService 
+{
+	
+	@Autowired
+	
+
+	@Override
+	public User saveUser(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<User> getAllUsers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User getUserById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteUserById(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

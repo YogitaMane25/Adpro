@@ -1,0 +1,28 @@
+package com.igap.adpro.entity;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "PMediaRoInvoiceDetails")
+public class PMediaRoInvoiceDetail 
+{
+private int id;
+private int pmediarodetailid;
+private int srno;
+private LocalDate pdate;
+private String caption;
+private BigDecimal width;
+private BigDecimal
+private BigDecimal
+private BigDecimal
+}

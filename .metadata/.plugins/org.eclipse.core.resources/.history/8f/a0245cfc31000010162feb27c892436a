@@ -1,0 +1,42 @@
+package com.igap.adpro.serviceimpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.igap.adpro.entity.Agency;
+import com.igap.adpro.repository.AgencyRepository;
+import com.igap.adpro.service.AgencyService;
+@Service
+public class AgencyServiceImpl implements AgencyService
+{
+ @Autowired
+ private AgencyRepository agencyRepository;
+ 
+	@Override
+	public Agency saveAgency(Agency agency)
+	{
+		
+		return null;
+	}
+
+	@Override
+	public List<Agency> getAllAgencies() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Agency getAgencyById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteAgencyById(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,40 @@
+package com.igap.adpro.serviceimpl;
+
+import java.util.List;
+
+import com.igap.adpro.entity.AdSchedule;
+import com.igap.adpro.service.AdScheduleService;
+
+public class AdScheduleServiceImpl implements AdScheduleService {
+
+	@Override
+	public AdSchedule saveAdSchedule(AdSchedule adSchedule) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<AdSchedule> getAllAdSchedules() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public AdSchedule getAdScheduleById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public AdSchedule updateAdSchedule(int id, AdSchedule adScheduleDetails) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteAdScheduleById(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

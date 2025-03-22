@@ -1,0 +1,40 @@
+package com.igap.adpro.serviceimpl;
+
+import java.util.List;
+
+import com.igap.adpro.entity.Client;
+import com.igap.adpro.service.ClientService;
+
+public class ClientServiceImpl implements ClientService {
+
+	@Override
+	public Client saveClient(Client client) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Client> getAllClients() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Client getClientById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Client updateClient(int id, Client clientDetails) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteClientById(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

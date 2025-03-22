@@ -1,0 +1,11 @@
+package com.igap.adpro.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public interface RoleService 
+{
+//   Create new Role
+	
+	Role saveRole(Role role)
+}

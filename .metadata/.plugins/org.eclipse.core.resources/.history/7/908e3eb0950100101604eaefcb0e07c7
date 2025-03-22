@@ -1,0 +1,52 @@
+package com.igap.adpro.entity;
+
+import java.math.BigDecimal;
+import java.sql.Date;
+import java.time.LocalDate;
+
+import org.apache.tomcat.util.net.openssl.OpenSSLStatus.Name;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "PMediaRoInvoiceDetails")
+public class PMediaRoInvoiceDetail 
+{
+private int id;
+private int pmediarodetailid;
+private int srno;
+private LocalDate pdate;
+private String caption;
+private BigDecimal width;
+private BigDecimal height;
+private BigDecimal area;
+private BigDecimal rate;
+private BigDecimal  charges;
+private BigDecimal  comissionpercent;
+private BigDecimal  comissionamount;
+private String      position;
+private String  chequeno;
+@Temporal(TemporalType.DATE)
+private Date chequedate;
+
+private BigDecimal totalcharges;
+private BigDecimal ccpercent;
+private BigDecimal ccamount;
+private BigDecimal finalcharges;
+private BigDecimal invoiceno;
+private BigDecimal gstamount;
+private BigDecimal cgstamount;
+private BigDecimal sgstamount;
+private BigDecimal igstamount;
+private String hue;
+
+}
