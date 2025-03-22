@@ -1,0 +1,93 @@
+package com.igap.adpro.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.igap.adpro.entity.PMedia;
+import com.igap.adpro.service.PMediaService;
+
+@RestController
+@RequestMapping("/pmedias")
+public class PMediaController 
+{
+	@Autowired
+	 private PMediaService pMediaService;
+	
+//	create new pmedia
+	
+	@PostMapping
+	
+	public ResponseEntity<PMedia> savePMedia(@RequestBody PMedia pMedia)
+	
+	{
+		PMedia savedPMedia=pMediaService.savePMedia(pMedia);
+		
+		
+		return new ResponseEntity<>(savedPMedia,HttpStatus.CREATED);
+		
+	}
+	
+//	get all pmedia
+	
+	@GetMapping
+	
+	public ResponseEntity<List<PMedia>> getAllPMedis()
+	{
+	List<PMedia> pMedias= pMediaService.getAllPMedias();
+	
+	return new ResponseEntity<>(pMedias,HttpStatus.OK);
+	
+	}
+	
+//	get pmedia by id
+	
+	@GetMapping("/{id}")
+	
+	public ResponseEntity<PMedia> getPMediaById(@PathVariable int id)
+	{
+		PMedia pMedia=pMediaService.getPMediaById(id);
+		
+		return new ResponseEntity<>(pMedia,HttpStatus.OK);
+		
+		
+	}
+	
+//	update pmedia by id
+	
+	@PutMapping("/{id}")
+	
+	public ResponseEntity<PMedia> updatePMedia(@PathVariable int id,@RequestBody PMedia pMediaDetails)
+	{
+		PMedia updatedPMedia=pMediaService.updatePMedia(id, pMediaDetails);
+		
+		return new ResponseEntity<>(updatedPMedia,HttpStatus.OK);
+		
+	}
+	
+// delete pmedia by id
+	
+	@DeleteMapping("/{id}")
+	
+	public ResponseEntity<String> deletePMediaById(@PathVariable int id)
+	{
+		pMediaService.deletePMediaById(id);
+		
+		return new ResponseEntity<>("pmedia deleted successfully!",HttpStatus.OK);
+		
+		
+	}
+	
+	
+	
+}

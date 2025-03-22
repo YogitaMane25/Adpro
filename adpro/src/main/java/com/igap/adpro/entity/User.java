@@ -1,0 +1,47 @@
+package com.igap.adpro.entity;
+
+import java.time.LocalDateTime;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Entity
+@Data
+@Table(name = "Users")
+public class User 
+{
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+ private int id;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "agencyId")
+	private Agency agency;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "roleId")
+	private Role role;
+	
+	private String email;
+	
+
+	private String password;
+	
+	
+	private String name;
+	
+	
+	private LocalDateTime createdon;
+	
+	
+
+	
+}

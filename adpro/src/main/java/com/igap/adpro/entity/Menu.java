@@ -1,0 +1,32 @@
+package com.igap.adpro.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Data
+@Entity
+
+@Table(name = "Menus")
+public class Menu
+
+{
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+
+	private int srNo;
+
+	private String title;
+
+	private String link;
+
+	private Boolean isParent;
+
+	private int parentId;
+
+}

@@ -1,0 +1,60 @@
+
+package com.igap.adpro.entity;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+import jakarta.annotation.Generated;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "PMediaRoInvoices")
+
+public class PMediaRoInvoice {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+
+	@ManyToOne
+	@JoinColumn(name = "agencyId")
+	private Agency agency;
+
+	private String financialyear;
+
+	@ManyToOne
+	@JoinColumn(name = "pMediaRoId")
+	private PMediaRo pMediaRo;
+
+	@ManyToOne
+	@JoinColumn(name = "gstId")
+	private Gst gst;
+
+	private String invoiceno;
+	private LocalDate invoiceDate;
+	private BigDecimal totalcharges;
+	private BigDecimal commissionamount;
+	private BigDecimal robillamount;
+	private BigDecimal discountpercent;
+	private BigDecimal discountamount;
+	private BigDecimal cgstpercent;
+	private BigDecimal cgstamount;
+	private BigDecimal sgstpercent;
+	private BigDecimal sgstamount;
+	private BigDecimal igstpercent;
+	private BigDecimal igstamount;
+	private BigDecimal billamount;
+	private String status;
+
+}

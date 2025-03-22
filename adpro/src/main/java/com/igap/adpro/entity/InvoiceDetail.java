@@ -1,0 +1,33 @@
+package com.igap.adpro.entity;
+
+import java.math.BigDecimal;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Entity
+@Data
+@Table(name = "InvoiceDetails")
+public class InvoiceDetail
+{
+	    @Id
+	    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	    private Long id;
+
+	    @ManyToOne
+	    @JoinColumn(name = "invoiceId", referencedColumnName = "id")
+	    private Invoice invoice; // Mapping to Invoice entity
+
+	    private Integer srNo;
+	    private String name;
+	    private String description;
+	    private Integer quantity;
+	    private BigDecimal rate;
+	    private BigDecimal amount;
+}

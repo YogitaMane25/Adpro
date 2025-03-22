@@ -1,7 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-    <typeInfo handle="=adpro/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.igap.adpro.service{RoleService.java[RoleService" modifiers="513" timestamp="1742362735384"/>
-    <typeInfo handle="=adpro/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.igap.adpro.service{UserService.java[UserService" modifiers="513" timestamp="1742363566973"/>
-    <typeInfo handle="=adpro/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.igap.adpro.service{StateService.java[StateService" modifiers="513" timestamp="1742371006000"/>
-    <typeInfo handle="=adpro/C:\/Users\/Yogita\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/3.4.3\/spring-data-jpa-3.4.3.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.data=/=/maven.artifactId=/spring-data-jpa=/=/maven.version=/3.4.3=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1740998093843"/>
-</typeInfoHistroy>
+<typeInfoHistroy/>
