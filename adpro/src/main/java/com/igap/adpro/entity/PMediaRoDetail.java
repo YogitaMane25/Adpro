@@ -1,0 +1,61 @@
+package com.igap.adpro.entity;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "PMediaRoDetails")
+public class PMediaRoDetail {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+
+	@ManyToOne
+	@JoinColumn(name = "pMediaRoId")
+	private PMediaRo PMediaRo;
+
+	private Integer srno;
+
+	private LocalDate pdate;
+
+	private String caption;
+
+	private BigDecimal width;
+	private BigDecimal height;
+	private BigDecimal area;
+	private BigDecimal rate;
+	private BigDecimal charges;
+	private BigDecimal comissionpercent;
+	private BigDecimal comissionamount;
+	private String position;
+	private String chequeno;
+    private LocalDate chequedate;
+
+	private BigDecimal totalcharges;
+	private BigDecimal ccpercent;
+	private BigDecimal ccamount;
+	private BigDecimal finalcharges;
+	private String invoiceno;
+	private BigDecimal gstamount;
+	private BigDecimal cgstamount;
+	private BigDecimal sgstamount;
+	private BigDecimal igstamount;
+	private String hue;
+}
