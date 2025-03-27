@@ -1,7 +1,0 @@
-package com.igap.adpro.service;
-
-
-public interface StateService extends UserService 
-{
-
-}
