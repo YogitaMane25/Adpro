@@ -1,6 +1,0 @@
-package com.igap.adpro.service;
-
-public interface ModuleService 
-{
-
-}
